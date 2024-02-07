@@ -28,3 +28,8 @@ $white-darkm: #1e1c1c;
     text-align: center;
     margin: 40px auto 30px;
 }
+@mixin text-color($val) {
+    @if $val == 1 {
+        color: $green
+    }
+}

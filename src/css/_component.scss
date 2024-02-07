@@ -89,6 +89,7 @@ h1, h2, h3 {
 }
 h1 {
     line-height: 1.2em;
+    @include base.text-color(1)
 }
 
 picture, img {
