@@ -1,0 +1,31 @@
+/* Ljust tema */
+$bg-color: #eefbf6;
+$mint: #BAF3DB;
+$sage: #4BCE97;
+$green: #2ABB7F;
+$active: darken($mint, 20%);
+$black: #000;
+$white: #fff;
+
+
+/* Mörkt tema */
+$bg-color-darkm: #1C3329;
+$mint-darkm: #164B35;
+$sage-darkm: #1F845A;
+$green-darkm: #22A06B;
+$active-darkm: lighten($bg-color-darkm, 10%);
+$black-darkm: #f8f3f3;
+$white-darkm: #1e1c1c;
+
+/* Mixins */
+@mixin images {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+@mixin headings {
+    text-align: center;
+    margin: 40px auto 30px;
+}
+

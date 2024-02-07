@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="stylesheet" href="./css/main.scss">
+    <script src="https://kit.fontawesome.com/8726bca3f8.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="openMenu" aria-label="öppna meny">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </button>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="sass.html" id="active">SASS</a></li>
+                <li><a href="#">Länk 3</a></li>
+                <li><a href="#">Länk 4</a></li>
+                <li><a href="#">Länk 5</a></li>
+            </ul>
+            <button id="closeMenu" aria-label="stäng meny">
+                <i class="fa-solid fa-xmark fa-2x"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Arbeta med SASS</h1>
+
+            <article>
+                <h2>Partials</h2>
+                <p>
+                    Själva konceptet med partials och att kunna dela upp koden greppade jag direkt.
+                    Att däremot komma på vad som ska ligga vart och hur man ska dela upp det var ju inte helt enkelt 
+                    och ärligt talat hamnade ju typ allt i samma fil ändå....
+                </p>
+            </article>
+            <article>
+                <h2>Variabler & color functions</h2>
+                <p>
+                    Som jag har längtat! Variabler var ingenting jag änvände när vi arbetade med vanlig CSS, 
+                    Men det är något som jag har saknat otroligt mycket. Väldigt smidigt att använda sig av när 
+                    man till exempel vill byta färgtema eller dylikt.
+                    Variabler tillsammans med ett par color functions ligger i den partial som heter base.
+                </p>
+            </article>
+            <article>
+                <h2>Nesting</h2>
+                <p>
+                    Att kunna nesta koden är också något jag har saknat i vanlig CSS. 
+                    Det är så smidigt att istället för att skriva ut varje element kunna nesta elementen i sin parent.
+                </p>
+            </article>
+            <article>
+                <h2>Mixins</h2>
+                <p>
+                    Här började hjärnkontoret jobba på högvarv... Hur, när, var, varför? 
+                    <br>
+                    Okej, kanske inte riktigt... Men det tog ändå lite tid innan jag listade 
+                    ut hur och till vad jag skulle använda mixins.
+                    <br>
+                    Jag tror det blir mer självklart när man gör större projekt som man kan implementera det i.
+                </p>
+            </article>
+            <article>
+                <h2>Selector (@extend)</h2>
+                <p>
+                    Kanonbra funktion! 
+                    Men precis som med mixins så tror jag det känns mer självklart 
+                    när man ska använda dessa i större projekt.
+                </p>
+            </article>
+            <article>
+                <h2> If-satser</h2>
+                <p>
+
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT211G, Frontend-baserad webbutveckling.
+            <br>
+            © Copyright 2024 Emma Ådahl Görling
+        </p>
+    </footer>
+</body>
+</html>

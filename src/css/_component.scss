@@ -1,0 +1,154 @@
+@use 'base';
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.5em;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: base.$mint;
+    padding: 20px;
+    margin: 0px;
+    button {
+        background-color: base.$mint;
+        border: none;
+    }
+}
+
+/* Huvudmeny */
+nav {
+    background-color: base.$mint;
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+    li {
+        list-style: none;
+        margin: 20px 35px auto auto;
+        text-align: center;
+    }
+    a {
+        color: base.$black;
+        text-decoration: none;
+        font-size: 1.7em;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    a:hover, #active {
+        background-color: base.$active
+
+    }
+}
+
+/* Main */
+main {
+    background-color: base.$bg-color;
+    padding: 0;
+    a {
+        color: base.$green;
+        border-radius: 5px;
+        padding: 3px;
+    }
+    a:hover {
+        background-color: base.$green;
+        color: base.$black;
+    }
+}
+/* Sectioner och articles */
+article {
+    margin: 30px auto 50px;
+    width: 90%;
+    max-width: 1100px;   
+    
+    p {
+        max-width: 40em;
+        margin: 20px auto;
+    }
+}
+section {
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    @extend header;
+    text-align: center;  
+}
+
+/* Rubriker */
+h1, h2, h3 {
+    @include base.headings;
+}
+h1 {
+    line-height: 1.2em;
+}
+
+picture, img {
+    @include base.images;
+}
+
+/* Mörkt tema på enhet */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: base.$black-darkm;
+    }
+    header, footer {
+        background-color: base.$bg-color-darkm;
+        button {
+            color: base.$black-darkm;
+            background-color: base.$bg-color-darkm;
+        }
+    }
+    nav {
+        background-color: base.$bg-color-darkm;
+        
+        a {
+            color: base.$black-darkm;
+        }
+        a:hover, #active {
+            background-color: base.$active-darkm
+        }
+    }
+    main {
+        background-color: base.$mint-darkm;
+        a {
+            color: base.$green-darkm;
+        }
+        a:hover {
+            background-color: base.$green-darkm;
+            color: base.$white-darkm;
+        }
+    }
+    
+}
+
+/* Större än 1100px */
+@media (min-width: 1100) {
+    #openMenu {
+        display: none;
+    }
+    nav {
+        display: block !important;
+        position: static !important;
+        height: fit-content;
+        button {
+            display: none;
+            margin: 10px auto;
+        }
+        ul{
+            margin: 0 auto;
+            text-align: center;
+        }
+        li {
+            display: inline;
+        }
+    }   
+}

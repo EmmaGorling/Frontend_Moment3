@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida</title>
+    <link rel="stylesheet" href="./css/main.scss">
+    <script src="https://kit.fontawesome.com/8726bca3f8.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="openMenu" aria-label="öppna meny">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </button>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html" id="active">Startsida</a></li>
+                <li><a href="sass.html">SASS</a></li>
+                <li><a href="#">Länk 3</a></li>
+                <li><a href="#">Länk 4</a></li>
+                <li><a href="#">Länk 5</a></li>
+            </ul>
+            <button id="closeMenu" aria-label="stäng meny">
+                <i class="fa-solid fa-xmark fa-2x"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>
+                Frontend-baserad webbutveckling
+            </h1>
+            <article>
+                <h2>Problematik</h2>
+                
+                <p>
+                    Innan momentet påbörjades behövde jag lämna tillbaka den sationära datorn, tillsammans med dom skärmar 
+                    som min vän så snällt lånat ut till mig. Tills vidare får jag sitta med min laptop, 
+                    som jag har insett har riktigt dålig färgåtergivning. 
+                    Därav att färgschemat kanske inte är det vackraste som jorden har skådat, 
+                    men jag kommer troligtvis ändra på det när jag har löst mitt dator-problem.
+                    <br>
+                    <br>
+                    Detta gjorde också att jag inte har kunnat göra en logga och favicon att återanvända 
+                    i alla mina projekt som jag hade tänkt, eftersom min bärbara dator inte klarar av Adobe Illustrator.  
+                </p>
+                
+                <picture>
+                    <source srcset="images/trash.jpg?as=avif&width=1000" type="image/avif">
+                    <img src="images/trash.jpg?width=1000" alt="Mac på väg ner i soporna">
+                </picture>
+
+                <h3>Uppdatering</h3>
+                <p>
+                    Ännu mer problem uppstår och jag kan nog inte med ord beskriva hur mycket jag HATAR parcel....
+                    <br>
+                    Nu när jag har gjort typ allt i momentet och tänker -"Bra, nu ska jag ta dom där bilderna som jag har tänkt ha med i min webbplats..."
+                    <br>
+                    Jag tar bilderna, laddar över dom till den förbannade datorn och lägger till dom i projektet och så fort jag försöker lägga till dom i min HTML-kod kraschar parcel.
+                    Det fungerar och bilderna visas på sidan när jag gör en commit och push så att det publiceras, men jag kan inte göra en local host. 
+                    Detta fick det att koka över, så jag gjorde ett nytt projekt och kopierade över koden fil för fil, självklart fungerade det efter det...
+                    
+                </p>
+                
+            </article>
+
+            <article>
+                <h2>
+                    Moment 3
+                </h2>
+                <p>
+                    I moment 3 ska vi börja arbeta med SASS, information om hur det har gått finns på <a href="sass.html">SASS</a>.
+                </p>
+
+                <picture>
+                    <source srcset="images/sass.jpg?as=avif&width=1000" type="image/avif">
+                    <img src="images/sass.jpg?width=1000" alt="SASS i snö">
+                </picture>
+            </article>
+
+            <article>
+                <h2>
+                    Moment 4
+                </h2>
+                <p>
+                    I moment 4 ska vi börja hålla på med animationer i CSS/SASS.
+                </p>
+            </article>
+
+            <article>
+                <h2>
+                    Moment 5
+                </h2>
+                <p>
+                    I moment 5 ska vi arbeta med dynamiska webbplatser 
+                    genom att göra fetch-anrop som är kopplade till varandra.
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Laborationsuppgift för kursen DT211G, Frontend-baserad webbutveckling.
+            <br>
+            © Copyright 2024 Emma Ådahl Görling
+        </p>
+    </footer>
+</body>
+</html>
