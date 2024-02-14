@@ -6,6 +6,14 @@ $green: #2ABB7F;
 $active: darken($mint, 20%);
 $black: #000;
 $white: #fff;
+$bg-color-gradient: 
+    linear-gradient(
+        45deg, 
+        #ad45b6,  
+        #fcb045, 
+        #affc45, 
+        #45fcac, 
+        #4558fc );
 
 
 /* Mörkt tema */
@@ -31,5 +39,33 @@ $white-darkm: #1e1c1c;
 @mixin text-color($val) {
     @if $val == 1 {
         color: $green
+    }
+}
+
+@keyframes bgColorGradient {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes animations1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes animations2 {
+    0% {
+        left: -50px;
+    }
+    100%{
+    left:100%;
+    transform: rotate(420deg);
     }
 }

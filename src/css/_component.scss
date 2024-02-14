@@ -1,4 +1,5 @@
 @use 'base';
+
 body {
     font-family: "Lato", sans-serif;
     line-height: 1.5em;
@@ -26,6 +27,7 @@ nav {
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 999;
     button {
         display: block;
         margin: 10px auto;
@@ -96,6 +98,49 @@ picture, img {
     @include base.images;
 
 }
+
+
+/* Animations-sida */
+#animations1 {
+    color: base.$black;
+    animation: animations1 2s infinite alternate ease;
+    
+}
+#bgColorChange {
+    padding: 0.5em;
+    border-radius: 10px;
+    background-image: base.$bg-color-gradient;
+    background-size: 500%;
+    
+    h2, p {
+        border-radius: 5px;
+        padding: 5px;
+        width: fit-content;
+        background-color: rgba($color: base.$bg-color, $alpha: 0.8);      
+        transition: 0.7s ease-out;
+    } 
+    h2:hover, p:hover {
+        transform: translate(0, -10px);
+    }
+}
+#bgColorChange:hover {
+        animation: bgColorGradient 8s infinite alternate;
+}
+#animations2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    background-image: linear-gradient(90deg, base.$green, base.$mint, base.$green);
+    animation: animations2 3s infinite alternate-reverse ease-in-out; 
+   
+}
+#divider {
+    height: 2px;
+    width: 100%;
+    background-color: grey;
+}
+
 
 /* Mörkt tema på enhet */
 @media (prefers-color-scheme: dark) {
