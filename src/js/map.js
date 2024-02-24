@@ -38,8 +38,7 @@ function showCity(place) {
     const city = place.filter((item) => item.type === 'city');
     
     // Longitud och latitud för första staden som man får tillbaka
-    const lat = city[0].lat;
-    const lon = city[0].lon;
+    const position = [city[0].lat, city[0].lon];
 
-    
+
 }

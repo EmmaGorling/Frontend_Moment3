@@ -11,6 +11,7 @@ header {
     background-color: base.$mint;
     padding: 20px;
     margin: 0px;
+    max-width: 100vw;
     button {
         background-color: base.$mint;
         border: none;
@@ -25,17 +26,22 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 999;
     button {
         display: block;
         margin: 10px auto;
     }
+    ul {
+        width: fit-content;
+    }
     li {
         list-style: none;
         margin: 20px 35px auto auto;
         text-align: center;
+        max-width: 100vw;
+        width: fit-content;
     }
     a {
         color: base.$black;
@@ -54,6 +60,7 @@ nav {
 main {
     background-color: base.$bg-color;
     padding: 0;
+    max-width: 100vw;
     a {
         color: base.$green;
         border-radius: 5px;
@@ -144,11 +151,10 @@ picture, img {
 
 /* Karta */
 #map {
-    background-color: black;
     width: 70%;
-    height: 60%;
+    height: 65%;
     min-height: 300px;
-    margin: 4em auto 2em;
+    margin: 4em auto 15em;
 }
 #searchDiv {
     margin: 0px auto;
