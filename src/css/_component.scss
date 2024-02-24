@@ -142,6 +142,19 @@ picture, img {
 }
 
 
+/* Karta */
+#map {
+    background-color: black;
+    width: 70%;
+    height: 60%;
+    min-height: 300px;
+    margin: 4em auto 2em;
+}
+#searchDiv {
+    margin: 0px auto;
+    text-align: center;
+}
+
 /* Mörkt tema på enhet */
 @media (prefers-color-scheme: dark) {
     body {
