@@ -13,7 +13,14 @@ async function init() {
         const courses = data.filter((item) => item.type === 'Kurs');
         const programs = data.filter((item) => item.type === 'Program');
 
+        filterCourses(courses);
     } catch {
         document.getElementById('error').innerHTML = 'Datan kunde inte hämtas.'
     }
 }
+
+async function filterCourses(courses) {
+    
+    
+
+};
