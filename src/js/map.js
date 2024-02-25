@@ -22,28 +22,34 @@ function showMap() {
     const searchEl = document.getElementById('search');
     const searchBtn = document.getElementById('searchBtn');
     searchBtn.addEventListener('click', () => {
-        searchCity(searchEl.value);
+        searchCity(searchEl.value, map);
         
     });
 }
 
 // Sök med fetchanrop
-function searchCity(input) {
+function searchCity(input, map) {
     fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${input}`)
         .then(result=>result.json())
         .then(place => {
-            showCity(place);
+            showCity(place, map);
         });
         
 }
 
-function showCity(place) {
-    
-    //Filtrera ut stad
-    const city = place.filter((item) => item.type === 'city');
+function showCity(place, map) {
     
     // Longitud och latitud för första staden som man får tillbaka
-    const position = [city[0].lat, city[0].lon];
+    let lat = place[0].lat;
+    let lon = place[0].lon;
 
+    // Gör det till en "Leaflet-vaiabel"
+    let position = new L.latLng(lat, lon);
+
+    // Funktion för att flytta vyn
+    map.flyTo(position, 13);
+
+    
+    let marker = L.marker([lat, lon]).addTo(map);
 
 }
