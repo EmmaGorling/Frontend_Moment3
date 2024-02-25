@@ -14,6 +14,7 @@ async function init() {
         const programs = data.filter((item) => item.type === 'Program');
 
         sortCourses(courses);
+        sortPrograms(programs);
     } catch {
         document.getElementById('error').innerHTML = 'Datan kunde inte hämtas.'
     }
@@ -28,12 +29,12 @@ function sortCourses(courses) {
 
     const wantedCourses = courses.slice(0, 6);
 
-    showChart(wantedCourses);
+    showCourseChart(wantedCourses);
     
 };
 
 // Skriva ut diagram över kurser
-function showChart(courses) {
+function showCourseChart(courses) {
     
     // Hämta canvas-elementet
     const courseChart = document.getElementById('courses');
@@ -71,3 +72,49 @@ function showChart(courses) {
       });
 
 }
+
+// Sortera program
+function sortPrograms(programs) {
+    
+    programs.sort(function(a, b){
+        return b.applicantsTotal - a.applicantsTotal;
+    });   
+
+    const wantedPrograms = programs.slice(0, 5);
+
+    showProgChart(wantedPrograms);
+};
+
+function showProgChart(programs) {
+    // Hämta canvas-elementet
+    const progChart = document.getElementById('programs');
+
+    // Göra arrayer att använda i chart
+    const progName = programs.map((item) => {
+        return item.name;
+    });
+    const progApplicants = programs.map((item) => {
+        return item.applicantsTotal
+    });
+
+    // Göra ett nytt Chart
+    new Chart(progChart, {
+        type: 'pie',
+        data: {
+          labels: progName,
+          datasets: [{
+            label: 'Totalt antal sökande',
+            data: progApplicants,
+            backgroundColor: [
+                'rgba(62, 187, 170, 0.4)',
+                'rgba(225,152,154, 0.6)',
+                'rgba(150,24,51, 0.5)',
+                'rgba(0,137,216, 0.2)',
+                'rgba(0,44,34, 0.5)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        
+      });
+};
