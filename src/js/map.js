@@ -8,7 +8,10 @@ function init () {
 
 
 function showMap() {
-    let map = L.map('map').setView([58.2057984, 15.9875072], 13);
+    let map = L.map('map', {
+        center: [58.2057984, 15.9875072],
+        zoom: 13
+    });
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -20,6 +23,7 @@ function showMap() {
     const searchBtn = document.getElementById('searchBtn');
     searchBtn.addEventListener('click', () => {
         searchCity(searchEl.value);
+        
     });
 }
 
@@ -30,6 +34,7 @@ function searchCity(input) {
         .then(place => {
             showCity(place);
         });
+        
 }
 
 function showCity(place) {
