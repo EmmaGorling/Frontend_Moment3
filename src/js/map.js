@@ -2,6 +2,8 @@
 
 window.onload = init;
 
+let marker;
+
 function init () {
     showMap(); 
 }
@@ -49,7 +51,15 @@ function showCity(place, map) {
     // Funktion för att flytta vyn
     map.flyTo(position, 13);
 
+    // Ta bort befintlig markör om den finns
+    if (marker) {
+        map.removeLayer(marker);
+    }
     
-    let marker = L.marker([lat, lon]).addTo(map);
+    // Lägg till markör
+    marker = L.marker(position).addTo(map);
+    marker.setLatLng(position);
+    
 
-}
+    
+};
