@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animering</title>
+    <title>Diagram</title>
     <link rel="stylesheet" href="./css/main.scss">
     <script src="https://kit.fontawesome.com/8726bca3f8.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/mycharts.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -20,8 +22,8 @@
             <ul>
                 <li><a href="index.html">Startsida</a></li>
                 <li><a href="sass.html">SASS</a></li>
-                <li><a href="animations.html" id="active">Animering</a></li>
-                <li><a href="diagrams.html">Diagram</a></li>
+                <li><a href="animations.html">Animering</a></li>
+                <li><a href="diagrams.html"  id="active">Diagram</a></li>
                 <li><a href="maps.html">Karta</a></li>
             </ul>
             <button id="closeMenu" aria-label="stäng meny">
@@ -30,26 +32,18 @@
         </nav>
     </header>
     <main>
-        <h1 id="animations1">Animering</h1>
-
-        <section>
-            <article id="bgColorChange">
-                <h2>Keyframes, transform & transition</h2>
-                <p>
-                    Ett jätteroligt moment som man likagärna hade kunnat gå fullständigt bananas med.
-                    <br>
-                    Nåja, nu är väl mina animationer inte de mest stilfulla man kan hitta, 
-                    men det var ändå roligt att få sin webbplats att bli med levande.
-                    <br>
-                    (Psssst... Testa att hovra över texten.)
-                </p>
-            </article>
-        </section>
-        <div id="animations2">
-            
+        <h1>Diagram</h1>
+        <div id="error">
         </div>
-        <div id="divider">
-            
+
+        <h2>De mest sökta kurserna på MittUniversitetet</h2>
+        <div class="chart">
+            <canvas  id="courses"></canvas>
+        </div>
+
+        <h2>De mest sökta programmen på MittUniversitetet</h2>
+        <div class="chart program">
+            <canvas  id="programs"></canvas>
         </div>
     </main>
     <footer>
